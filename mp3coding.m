@@ -44,11 +44,10 @@ for bark = barks
         delta_critical_band_rate_difference = comparingToBark - bark;
         volume_of_comparing_to_bark = freqency_magniute_in_decibels(comparingToIndex);
         volume_of_current_bark =  freqency_magniute_in_decibels(index);
-%         THIS PART HAVE NOT BEEN IMPLEMENTED YET
-%         if(isBelowThreshold(delta_critical_band_rate_difference, volume_of_current_bark, volume_of_comparing_to_bark))
-%             indexToRemove = [indexToRemove, index];
-%             break
-%         end
+        if(isBelowThreshold(delta_critical_band_rate_difference, volume_of_current_bark, volume_of_comparing_to_bark))
+            indexToRemove = [indexToRemove, index];
+            break
+        end
         comparingToIndex = comparingToIndex + 1;
     end
     index = index + 1;
@@ -71,8 +70,8 @@ function y = calculateBark(x)
 end
 
 function is = isBelowThreshold(delta, a_volume, b_volume)
-%     Haven't implemented this yet
-    is = 0 > 1
+%    THIS PART HAVEN'T BEEN IMPLEMENTED YET
+    is = 0 > 1;
 %     if delta > -14 && delta < -12 
 %         is = not(b_volume < 45) || a_volume > 83;
 %        
