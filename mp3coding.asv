@@ -44,7 +44,7 @@ for bark = barks
         delta_critical_band_rate_difference = comparingToBark - bark;
         volume_of_comparing_to_bark = freqency_magniute_in_decibels(comparingToIndex);
         volume_of_current_bark =  freqency_magniute_in_decibels(index);
-%         THIS PART HAVE NOT BEEN IMPLEMENTED YET
+%         THIS PART
 %         if(isBelowThreshold(delta_critical_band_rate_difference, volume_of_current_bark, volume_of_comparing_to_bark))
 %             indexToRemove = [indexToRemove, index];
 %             break
