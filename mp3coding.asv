@@ -44,11 +44,10 @@ for bark = barks
         delta_critical_band_rate_difference = comparingToBark - bark;
         volume_of_comparing_to_bark = freqency_magniute_in_decibels(comparingToIndex);
         volume_of_current_bark =  freqency_magniute_in_decibels(index);
-%         THIS PART
-%         if(isBelowThreshold(delta_critical_band_rate_difference, volume_of_current_bark, volume_of_comparing_to_bark))
-%             indexToRemove = [indexToRemove, index];
-%             break
-%         end
+        if(isBelowThreshold(delta_critical_band_rate_difference, volume_of_current_bark, volume_of_comparing_to_bark))
+            indexToRemove = [indexToRemove, index];
+            break
+        end
         comparingToIndex = comparingToIndex + 1;
     end
     index = index + 1;
@@ -71,8 +70,298 @@ function y = calculateBark(x)
 end
 
 function is = isBelowThreshold(delta, a_volume, b_volume)
-%     Haven't implemented this yet
-    is = 0 > 1
+    is = 0 > 1; % Not masked if not of maskign rulies applied
+    
+    if(b_volume >100)
+        if(delta > -14 && delta < -12)
+            
+        end
+        if(delta > -12 && delta < -10)
+            
+        end
+        if(delta > -10 && delta < -8)
+            
+        end
+        if(delta > -8 && delta < -6)
+            
+        end
+        if(delta > -6 && delta < -4)
+            
+        end
+        if(delta > -4 && delta < -2)
+            
+        end
+        if(delta > -2 && delta < -0)
+            
+        end
+        if(delta > 0 && delta < 2)
+            
+        end
+        if(delta > 2 && delta < 4)
+            
+        end
+    end
+    if(b_volume >90)
+        if(delta > -14 && delta < -12)
+            
+        end
+        if(delta > -12 && delta < -10)
+            
+        end
+        if(delta > -10 && delta < -8)
+            
+        end
+        if(delta > -8 && delta < -6)
+            
+        end
+        if(delta > -6 && delta < -4)
+            
+        end
+        if(delta > -4 && delta < -2)
+            
+        end
+        if(delta > -2 && delta < -0)
+            
+        end
+        if(delta > 0 && delta < 2)
+            
+        end
+        if(delta > 2 && delta < 4)
+            
+        end
+    end
+    if(b_volume >80)
+        if(delta > -14 && delta < -12)
+            
+        end
+        if(delta > -12 && delta < -10)
+            
+        end
+        if(delta > -10 && delta < -8)
+            
+        end
+        if(delta > -8 && delta < -6)
+            
+        end
+        if(delta > -6 && delta < -4)
+            
+        end
+        if(delta > -4 && delta < -2)
+            
+        end
+        if(delta > -2 && delta < -0)
+            
+        end
+        if(delta > 0 && delta < 2)
+            
+        end
+        if(delta > 2 && delta < 4)
+            
+        end
+    end
+    if(b_volume >70)
+        if(delta > -14 && delta < -12)
+            
+        end
+        if(delta > -12 && delta < -10)
+            
+        end
+        if(delta > -10 && delta < -8)
+            
+        end
+        if(delta > -8 && delta < -6)
+            
+        end
+        if(delta > -6 && delta < -4)
+            
+        end
+        if(delta > -4 && delta < -2)
+            
+        end
+        if(delta > -2 && delta < -0)
+            
+        end
+        if(delta > 0 && delta < 2)
+            
+        end
+        if(delta > 2 && delta < 4)
+            
+        end
+    end
+    if(b_volume >60)
+        if(delta > -14 && delta < -12)
+            
+        end
+        if(delta > -12 && delta < -10)
+            
+        end
+        if(delta > -10 && delta < -8)
+            
+        end
+        if(delta > -8 && delta < -6)
+            
+        end
+        if(delta > -6 && delta < -4)
+            
+        end
+        if(delta > -4 && delta < -2)
+            
+        end
+        if(delta > -2 && delta < -0)
+            
+        end
+        if(delta > 0 && delta < 2)
+            
+        end
+        if(delta > 2 && delta < 4)
+            
+        end
+    end
+    if(b_volume >50)
+        if(delta > -14 && delta < -12)
+            
+        end
+        if(delta > -12 && delta < -10)
+            
+        end
+        if(delta > -10 && delta < -8)
+            
+        end
+        if(delta > -8 && delta < -6)
+            
+        end
+        if(delta > -6 && delta < -4)
+            
+        end
+        if(delta > -4 && delta < -2)
+            
+        end
+        if(delta > -2 && delta < -0)
+            
+        end
+        if(delta > 0 && delta < 2)
+            
+        end
+        if(delta > 2 && delta < 4)
+            
+        end
+    end
+    if(b_volume >40)
+        if(delta > -14 && delta < -12)
+            
+        end
+        if(delta > -12 && delta < -10)
+            
+        end
+        if(delta > -10 && delta < -8)
+            
+        end
+        if(delta > -8 && delta < -6)
+            
+        end
+        if(delta > -6 && delta < -4)
+            
+        end
+        if(delta > -4 && delta < -2)
+            
+        end
+        if(delta > -2 && delta < -0)
+            
+        end
+        if(delta > 0 && delta < 2)
+            
+        end
+        if(delta > 2 && delta < 4)
+            
+        end
+    end
+    if(b_volume >30)
+        if(delta > -14 && delta < -12)
+            
+        end
+        if(delta > -12 && delta < -10)
+            
+        end
+        if(delta > -10 && delta < -8)
+            
+        end
+        if(delta > -8 && delta < -6)
+            
+        end
+        if(delta > -6 && delta < -4)
+            
+        end
+        if(delta > -4 && delta < -2)
+            
+        end
+        if(delta > -2 && delta < -0)
+            
+        end
+        if(delta > 0 && delta < 2)
+            
+        end
+        if(delta > 2 && delta < 4)
+            
+        end
+    end
+    if(b_volume >20)
+        if(delta > -14 && delta < -12)
+            
+        end
+        if(delta > -12 && delta < -10)
+            
+        end
+        if(delta > -10 && delta < -8)
+            
+        end
+        if(delta > -8 && delta < -6)
+            
+        end
+        if(delta > -6 && delta < -4)
+            
+        end
+        if(delta > -4 && delta < -2)
+            
+        end
+        if(delta > -2 && delta < -0)
+            
+        end
+        if(delta > 0 && delta < 2)
+            
+        end
+        if(delta > 2 && delta < 4)
+            
+        end
+    end
+    if(b_volume >10)
+        if(delta > -14 && delta < -12)
+            
+        end
+        if(delta > -12 && delta < -10)
+            
+        end
+        if(delta > -10 && delta < -8)
+            
+        end
+        if(delta > -8 && delta < -6)
+            
+        end
+        if(delta > -6 && delta < -4)
+            
+        end
+        if(delta > -4 && delta < -2)
+            
+        end
+        if(delta > -2 && delta < -0)
+            
+        end
+        if(delta > 0 && delta < 2)
+            
+        end
+        if(delta > 2 && delta < 4)
+            
+        end
+    end
 %     if delta > -14 && delta < -12 
 %         is = not(b_volume < 45) || a_volume > 83;
 %        

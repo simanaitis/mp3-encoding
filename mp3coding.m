@@ -70,8 +70,312 @@ function y = calculateBark(x)
 end
 
 function is = isBelowThreshold(delta, a_volume, b_volume)
-%    THIS PART HAVEN'T BEEN IMPLEMENTED YET
-    is = 0 > 1;
+    is = 0 > 1; % Not masked if not of maskign rulies applied
+    
+    if(b_volume < 100 && b_volume > 90)
+        if(delta > -14 && delta < -12)
+            is = a_volume < 42;
+            return
+        end
+        if(delta > -12 && delta < -10)
+            is = a_volume < 50;
+            return
+        end
+        if(delta > -10 && delta < -8)
+             is = a_volume < 55;
+            return
+        end
+        if(delta > -8 && delta < -6)
+             is = a_volume < 60;
+            return
+        end
+        if(delta > -6 && delta < -4)
+             is = a_volume < 65;
+            return
+        end
+        if(delta > -4 && delta < -2)
+             is = a_volume < 70;
+            return
+        end
+        if(delta > -2 && delta < -0)
+              is = a_volume < 80;
+            return
+        end
+        if(delta > 0 && delta < 1)
+               is = a_volume < 75;
+            return
+        end
+        if(delta > 1 && delta < 2)
+               is = a_volume < 60;
+            return
+        end
+        if(delta > 2 && delta < 3)
+                 is = a_volume < 20;
+            return
+        end
+        if(delta > 3 && delta < 4)
+                 is = a_volume < 15;
+            return
+        end
+    end
+    if(b_volume > 90 && b_volume > 80)
+        if(delta > -14 && delta < -12)
+            is = a_volume < 5;
+            return
+        end
+        if(delta > -12 && delta < -10)
+            is = a_volume < 20;
+            return
+        end
+        if(delta > -10 && delta < -8)
+             is = a_volume < 38;
+            return
+        end
+        if(delta > -8 && delta < -6)
+             is = a_volume < 43;
+            return
+        end
+        if(delta > -6 && delta < -4)
+             is = a_volume < 55;
+            return
+        end
+        if(delta > -4 && delta < -2)
+             is = a_volume < 68;
+            return
+        end
+        if(delta > -2 && delta < -0)
+              is = a_volume < 65;
+            return
+        end
+        if(delta > 0 && delta < 1)
+               is = a_volume < 55;
+            return
+        end
+        if(delta > 1 && delta < 2)
+               is = a_volume < 40;
+            return
+        end
+        if(delta > 2 && delta < 3)
+                 is = a_volume < 20;
+            return
+        end
+    end
+    if(b_volume > 80 && b_volume > 70)
+        if(delta > -10 && delta < -8)
+             is = a_volume < 10;
+            return
+        end
+        if(delta > -8 && delta < -6)
+             is = a_volume < 20;
+            return
+        end
+        if(delta > -6 && delta < -4)
+             is = a_volume < 40;
+            return
+        end
+        if(delta > -4 && delta < -2)
+             is = a_volume < 50;
+            return
+        end
+        if(delta > -2 && delta < -0)
+              is = a_volume < 58;
+            return
+        end
+        if(delta > 0 && delta < 1)
+               is = a_volume < 38;
+            return
+        end
+        if(delta > 1 && delta < 2)
+               is = a_volume < 20;
+            return
+        end
+        if(delta > 2 && delta < 3)
+                 is = a_volume < 5;
+            return
+        end
+    end
+    if(b_volume >70 && b_volume > 60)
+        if(delta > -8 && delta < -6)
+             is = a_volume < 5;
+            return
+        end
+        if(delta > -6 && delta < -4)
+             is = a_volume < 20;
+            return
+        end
+        if(delta > -4 && delta < -2)
+             is = a_volume < 30;
+            return
+        end
+        if(delta > -2 && delta < -0)
+              is = a_volume < 40;
+            return
+        end
+        if(delta > 0 && delta < 1)
+               is = a_volume < 40;
+            return
+        end
+        if(delta > 1 && delta < 2)
+               is = a_volume < 10;
+            return
+        end
+    end
+    if(b_volume >60 && b_volume > 50)
+        if(delta > -6 && delta < -4)
+             is = a_volume < 5;
+            return
+        end
+        if(delta > -4 && delta < -2)
+             is = a_volume < 15;
+            return
+        end
+        if(delta > -2 && delta < -0)
+              is = a_volume < 30;
+            return
+        end
+        if(delta > 0 && delta < 1)
+               is = a_volume < 22;
+            return
+        end
+        if(delta > 1 && delta < 2)
+               is = a_volume < 5;
+            return
+        end
+    end
+    if(b_volume >50 && b_volume > 40)
+        if(delta > -6 && delta < -4)
+             is = a_volume < 5;
+            return
+        end
+        if(delta > -4 && delta < -2)
+             is = a_volume < 5;
+            return
+        end
+        if(delta > -2 && delta < -0)
+              is = a_volume < 15;
+            return
+        end
+        if(delta > 0 && delta < 1)
+               is = a_volume < 5;
+            return
+        end
+    end
+%     if(b_volume > 40 && b_volume > 30)
+%         if(delta > -14 && delta < -12)
+%             
+%         end
+%         if(delta > -12 && delta < -10)
+%             
+%         end
+%         if(delta > -10 && delta < -8)
+%             
+%         end
+%         if(delta > -8 && delta < -6)
+%             
+%         end
+%         if(delta > -6 && delta < -4)
+%             
+%         end
+%         if(delta > -4 && delta < -2)
+%             
+%         end
+%         if(delta > -2 && delta < -0)
+%             
+%         end
+%         if(delta > 0 && delta < 2)
+%             
+%         end
+%         if(delta > 2 && delta < 4)
+%             
+%         end
+%     end
+%     if(b_volume > 30 && b_volume > 20)
+%         if(delta > -14 && delta < -12)
+%             
+%         end
+%         if(delta > -12 && delta < -10)
+%             
+%         end
+%         if(delta > -10 && delta < -8)
+%             
+%         end
+%         if(delta > -8 && delta < -6)
+%             
+%         end
+%         if(delta > -6 && delta < -4)
+%             
+%         end
+%         if(delta > -4 && delta < -2)
+%             
+%         end
+%         if(delta > -2 && delta < -0)
+%             
+%         end
+%         if(delta > 0 && delta < 2)
+%             
+%         end
+%         if(delta > 2 && delta < 4)
+%             
+%         end
+%     end
+%     if(b_volume > 20 && b_volume > 10)
+%         if(delta > -14 && delta < -12)
+%             
+%         end
+%         if(delta > -12 && delta < -10)
+%             
+%         end
+%         if(delta > -10 && delta < -8)
+%             
+%         end
+%         if(delta > -8 && delta < -6)
+%             
+%         end
+%         if(delta > -6 && delta < -4)
+%             
+%         end
+%         if(delta > -4 && delta < -2)
+%             
+%         end
+%         if(delta > -2 && delta < -0)
+%             
+%         end
+%         if(delta > 0 && delta < 2)
+%             
+%         end
+%         if(delta > 2 && delta < 4)
+%             
+%         end
+%     end
+%     if(b_volume > 10 && b_volume > 0)
+%         if(delta > -14 && delta < -12)
+%             
+%         end
+%         if(delta > -12 && delta < -10)
+%             
+%         end
+%         if(delta > -10 && delta < -8)
+%             
+%         end
+%         if(delta > -8 && delta < -6)
+%             
+%         end
+%         if(delta > -6 && delta < -4)
+%             
+%         end
+%         if(delta > -4 && delta < -2)
+%             
+%         end
+%         if(delta > -2 && delta < -0)
+%             
+%         end
+%         if(delta > 0 && delta < 2)
+%             
+%         end
+%         if(delta > 2 && delta < 4)
+%             
+%         end
+%     end
 %     if delta > -14 && delta < -12 
 %         is = not(b_volume < 45) || a_volume > 83;
 %        
